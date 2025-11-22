@@ -110,12 +110,14 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_picture.cpp release\qrc_picture.cpp
 release/qrc_picture.cpp: ../../picture.qrc \
 		../../../../qt/6.8.0/mingw_64/bin/rcc.exe \
+		../../4.jpg \
 		../../2.png \
 		../../1.jpg
 	D:\qt\6.8.0\mingw_64\bin\rcc.exe -name picture --no-zstd ..\..\picture.qrc -o release\qrc_picture.cpp
 
 release/qrc_picture.cpp: ../../picture.qrc \
 		../../../../qt/6.8.0/mingw_64/bin/rcc.exe \
+		../../4.jpg \
 		../../2.png \
 		../../1.jpg
 	D:\qt\6.8.0\mingw_64\bin\rcc.exe -name picture --no-zstd ..\..\picture.qrc -o release\qrc_picture.cpp
@@ -321,6 +323,20 @@ release/moc_menu.cpp: ../../menu.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
 		release/moc_predefs.h \
 		../../../../qt/6.8.0/mingw_64/bin/moc.exe
 	D:\qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include D:/Undaunted/undaunted/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/release/moc_predefs.h -ID:/qt/6.8.0/mingw_64/mkspecs/win32-g++ -ID:/Undaunted/undaunted -ID:/qt/6.8.0/mingw_64/include -ID:/qt/6.8.0/mingw_64/include/QtWidgets -ID:/qt/6.8.0/mingw_64/include/QtGui -ID:/qt/6.8.0/mingw_64/include/QtCore -I. -ID:/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -ID:/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -ID:/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -ID:/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -ID:/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -ID:/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\menu.h -o release\moc_menu.cpp
@@ -966,6 +982,20 @@ release/menu.o: ../../menu.cpp ../../menu.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtCore/qlocale.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
 		ui_menu.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtCore/QVariant \
 		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
@@ -975,7 +1005,20 @@ release/menu.o: ../../menu.cpp ../../menu.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
 		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QWidget
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/QGuiApplication \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/QScreen \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QMessageBox \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qmessagebox.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qdialog.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtCore/QRegularExpression \
+		../../../../../../qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\menu.o ..\..\menu.cpp
 
 release/splash.o: ../../splash.cpp ../../splash.h \
@@ -1193,7 +1236,15 @@ release/splash.o: ../../splash.cpp ../../splash.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
 		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
-		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
+		../../menu.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		../../../../../../qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		../../../../../../qt/6.8.0/mingw_64/include/QtGui/QScreen
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\splash.o ..\..\splash.cpp
 
 release/qrc_picture.o: release/qrc_picture.cpp 

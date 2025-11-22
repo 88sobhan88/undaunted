@@ -29,13 +29,13 @@ public:
     {
         if (Menu->objectName().isEmpty())
             Menu->setObjectName("Menu");
-        Menu->resize(800, 600);
+        Menu->resize(1293, 778);
         centralwidget = new QWidget(Menu);
         centralwidget->setObjectName("centralwidget");
         Menu->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Menu);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 26));
+        menubar->setGeometry(QRect(0, 0, 1293, 26));
         Menu->setMenuBar(menubar);
         statusbar = new QStatusBar(Menu);
         statusbar->setObjectName("statusbar");

@@ -3,4 +3,7 @@
         <file>1.jpg</file>
         <file>2.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>4.jpg</file>
+    </qresource>
 </RCC>
