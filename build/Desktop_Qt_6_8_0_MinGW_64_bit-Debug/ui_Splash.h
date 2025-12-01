@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -24,6 +25,7 @@ class Ui_Splash
 public:
     QWidget *centralwidget;
     QPushButton *pushButton;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -42,6 +44,17 @@ public:
         font.setBold(true);
         pushButton->setFont(font);
         pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 0);"));
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(700, 380, 171, 71));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Snap ITC")});
+        font1.setPointSize(20);
+        font1.setBold(true);
+        label->setFont(font1);
+        label->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        label->setTextFormat(Qt::TextFormat::AutoText);
+        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
         Splash->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Splash);
         menubar->setObjectName("menubar");
@@ -61,6 +74,7 @@ public:
     {
         Splash->setWindowTitle(QCoreApplication::translate("Splash", "MainWindow", nullptr));
         pushButton->setText(QCoreApplication::translate("Splash", "Play", nullptr));
+        label->setText(QCoreApplication::translate("Splash", "Welcome", nullptr));
     } // retranslateUi
 
 };

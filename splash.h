@@ -32,4 +32,4 @@ private:
     QPushButton *playButton;
 };
 
-#endif // SPLASH_H
+#endif

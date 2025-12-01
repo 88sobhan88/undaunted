@@ -9,16 +9,24 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Cell.cpp \
+    board.cpp \
     main.cpp \
     menu.cpp \
+    rectboard.cpp \
     splash.cpp
 
 HEADERS += \
+    Cell.h \
+    board.h \
     menu.h \
+    rectboard.h \
     splash.h
 
 FORMS += \
+    board.ui \
     menu.ui \
+    rectboard.ui \
     splash.ui
 
 # Default rules for deployment.
@@ -27,5 +35,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    map.qrc \
     picture.qrc \
     picture.qrc

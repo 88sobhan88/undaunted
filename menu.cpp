@@ -1,5 +1,6 @@
 #include "menu.h"
 #include "ui_menu.h"
+#include "rectboard.h"
 
 #include <QGuiApplication>
 #include <QScreen>
@@ -106,4 +107,62 @@ void Menu::validatePlayers()
     }
 
     QMessageBox::information(this, "Success", "Both player names are valid!");
+    openMapDialog();
+    this->close();
 }
+
+void Menu::openMapDialog()
+{
+    QDialog dialog(this);
+    dialog.setWindowTitle("Select Map");
+
+    QVBoxLayout *layout = new QVBoxLayout(&dialog);
+
+    QLabel *label = new QLabel("Choose a map:", &dialog);
+    QComboBox *combo = new QComboBox(&dialog);
+
+    combo->addItem("Map 1");
+    combo->addItem("Map 2");
+    combo->addItem("Map 3");
+    combo->addItem("Map 4");
+    combo->addItem("Map 5");
+
+    QPushButton *okButton = new QPushButton("OK", &dialog);
+
+    layout->addWidget(label);
+    layout->addWidget(combo);
+    layout->addWidget(okButton);
+
+    connect(okButton, &QPushButton::clicked, [&, this]() {
+        QString selectedMap = combo->currentText();
+        dialog.accept();
+
+        RectBoard *boardWindow = nullptr;
+
+        if (selectedMap == "Map 1") {
+            boardWindow = new RectBoard(5, 5, 4);
+        } else if (selectedMap == "Map 2") {
+            boardWindow = new RectBoard(7, 7, 6);
+        } else if (selectedMap == "Map 3") {
+            boardWindow = new RectBoard(9, 9, 8);
+        } else if (selectedMap == "Map 4") {
+            boardWindow = new RectBoard(11, 6, 5);
+        } else if (selectedMap == "Map 5") {
+            boardWindow = new RectBoard(9, 5, 4);
+        }
+
+        if (boardWindow) {
+            boardWindow->setAttribute(Qt::WA_DeleteOnClose);
+            boardWindow->setWindowTitle("Game Board - " + selectedMap);
+            boardWindow->showMaximized();
+        }
+
+        this->close();
+    });
+
+    dialog.exec();
+}
+
+
+
+

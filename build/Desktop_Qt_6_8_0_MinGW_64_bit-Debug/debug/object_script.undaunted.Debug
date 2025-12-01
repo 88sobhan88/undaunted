@@ -1,0 +1,12 @@
+debug/Cell.o
+debug/board.o
+debug/main.o
+debug/menu.o
+debug/rectboard.o
+debug/splash.o
+debug/qrc_map.o
+debug/qrc_picture.o
+debug/moc_board.o
+debug/moc_menu.o
+debug/moc_rectboard.o
+debug/moc_splash.o

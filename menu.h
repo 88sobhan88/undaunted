@@ -1,10 +1,16 @@
 #ifndef MENU_H
 #define MENU_H
 
+#include "Cell.h"          // اضافه شد
+
+
 #include <QMainWindow>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QLabel>
+#include <QDialog>
+#include <QComboBox>
+
 namespace Ui {
 class Menu;
 }
@@ -19,6 +25,8 @@ public:
 
 private slots:
     void validatePlayers();
+    void openMapDialog();
+
 
 private:
     Ui::Menu *ui;
@@ -31,4 +39,4 @@ private:
     bool isValidName(const QString &name);
 };
 
-#endif // MENU_H
+#endif

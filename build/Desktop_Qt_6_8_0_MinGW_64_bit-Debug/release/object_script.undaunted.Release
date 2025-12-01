@@ -1,0 +1,12 @@
+release/Cell.o
+release/board.o
+release/main.o
+release/menu.o
+release/rectboard.o
+release/splash.o
+release/qrc_map.o
+release/qrc_picture.o
+release/moc_board.o
+release/moc_menu.o
+release/moc_rectboard.o
+release/moc_splash.o

@@ -275,6 +275,7 @@ Makefile: ../../undaunted.pro ../../../../qt/6.8.0/mingw_64/mkspecs/win32-g++/qm
 		../../../../qt/6.8.0/mingw_64/lib/Qt6Core.prl \
 		../../../../qt/6.8.0/mingw_64/lib/Qt6EntryPoint.prl \
 		../../../../qt/6.8.0/mingw_64/mkspecs/features/build_pass.prf \
+		../../map.qrc \
 		../../picture.qrc
 	$(QMAKE) -o Makefile ..\..\undaunted.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 ../../../../qt/6.8.0/mingw_64/mkspecs/features/spec_pre.prf:
@@ -482,6 +483,7 @@ Makefile: ../../undaunted.pro ../../../../qt/6.8.0/mingw_64/mkspecs/win32-g++/qm
 ../../../../qt/6.8.0/mingw_64/lib/Qt6Core.prl:
 ../../../../qt/6.8.0/mingw_64/lib/Qt6EntryPoint.prl:
 ../../../../qt/6.8.0/mingw_64/mkspecs/features/build_pass.prf:
+../../map.qrc:
 ../../picture.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\undaunted.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
